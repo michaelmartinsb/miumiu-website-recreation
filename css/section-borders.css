@@ -1,0 +1,88 @@
+/* Section Border Styles for Wireframing 
+   Adds subtle borders around main sections to help with visual development */
+
+/* Main content sections */
+.hero, 
+.section, 
+.club-section, 
+.footer, 
+.header,
+.main-nav {
+    border: 1px dashed rgba(0, 0, 255, 0.3);
+    position: relative;
+}
+
+/* Child elements inside sections */
+.section-content,
+.featured-grid,
+.featured-item,
+.club-grid,
+.club-item,
+.footer-content,
+.footer-col,
+.header-content,
+.main-nav-content {
+    border: 1px dotted rgba(255, 0, 0, 0.2);
+    position: relative;
+}
+
+/* Add section identifiers */
+.hero::before,
+.section::before,
+.club-section::before,
+.footer::before,
+.header::before,
+.main-nav::before {
+    content: attr(class);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 10px;
+    padding: 2px 4px;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/* Add a toggle button to show/hide borders */
+.wireframe-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 12px;
+    cursor: pointer;
+    z-index: 1001;
+    border-radius: 4px;
+}
+
+.wireframe-hidden .hero,
+.wireframe-hidden .section,
+.wireframe-hidden .club-section,
+.wireframe-hidden .footer,
+.wireframe-hidden .header,
+.wireframe-hidden .main-nav,
+.wireframe-hidden .section-content,
+.wireframe-hidden .featured-grid,
+.wireframe-hidden .featured-item,
+.wireframe-hidden .club-grid,
+.wireframe-hidden .club-item,
+.wireframe-hidden .footer-content,
+.wireframe-hidden .footer-col,
+.wireframe-hidden .header-content,
+.wireframe-hidden .main-nav-content {
+    border: none;
+}
+
+.wireframe-hidden .hero::before,
+.wireframe-hidden .section::before,
+.wireframe-hidden .club-section::before,
+.wireframe-hidden .footer::before,
+.wireframe-hidden .header::before,
+.wireframe-hidden .main-nav::before {
+    display: none;
+} 

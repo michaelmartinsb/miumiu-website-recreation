@@ -18,10 +18,12 @@ miumiu-website/
 │   ├── header.css            # Header-specific styles
 │   ├── footer.css            # Footer-specific styles
 │   ├── components.css        # Reusable component styles
-│   └── utils.css             # Utility classes, animations
+│   ├── utils.css             # Utility classes, animations
+│   └── section-borders.css   # Wireframe borders for visual development
 │
 └── js/
-    └── main.js               # JavaScript functionality
+    ├── main.js               # Main JavaScript functionality
+    └── wireframe.js          # Wireframe toggle functionality
 ```
 
 ## Features
@@ -30,6 +32,9 @@ miumiu-website/
 - **Responsive Layout**: Works seamlessly across devices of all sizes
 - **Modern Web Practices**: Semantic HTML5, CSS3, and vanilla JavaScript
 - **Performance Optimized**: Minimal external resources and optimized assets
+- **Development Tools**:
+  - Wireframe borders for visual structure development
+  - Section labels for easy identification
 - **Interactive Elements**:
   - Newsletter signup popup
   - Cookie consent notice
@@ -57,6 +62,47 @@ This project is structured to be easily maintained and extended:
 - **CSS Organization**: Styles are separated by function (main, header, footer, components, utilities)
 - **JavaScript**: All interactive functionality is in a single, well-commented file
 - **Images**: Replace the placeholder images in the `assets/images/` folder with actual content
+
+### Wireframe Mode
+
+The project includes a wireframe mode for easier visual development:
+
+- Blue dashed borders around major sections
+- Red dotted borders around child elements
+- Section labels to identify different parts of the page
+- Toggle button in the bottom-right corner to show/hide wireframe
+
+This helps with:
+- Visualizing page structure
+- Identifying section boundaries
+- Easier debugging in Chrome Developer Tools
+
+### Image Size Requirements
+
+For optimal display, use these image dimensions:
+
+1. **Hero Image**: 1920px × 800px (full width)
+
+2. **Section Images** (full-width sections):
+   - Section 1 (Contrasting codes): 1920px × 1080px
+   - Section 2 (Sporty Essence): 1920px × 1080px
+
+3. **Featured Grid Items**:
+   - Bags image: 800px × 1000px
+   - Shoes image: 800px × 1000px
+
+4. **Club Section Images**:
+   - Women's Tales: 600px × 800px
+   - Leathergoods Campaign: 600px × 800px
+   - Fashion Show: 600px × 800px
+   - Literary Club: 600px × 800px
+
+5. **Logo** (SVG already implemented, but if replaced with image):
+   - 120px × 16px
+
+6. **Icons**:
+   - Header icons: 24px × 24px
+   - Social icons: 24px × 24px
 
 ## Browser Support
 
