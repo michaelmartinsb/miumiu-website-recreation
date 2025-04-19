@@ -1,0 +1,125 @@
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.header-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 2rem;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.logo img {
+    height: 16px;
+}
+
+.header-nav {
+    display: flex;
+    gap: 1.8rem;
+}
+
+.header-nav a, .header-icons a {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: opacity 0.2s;
+}
+
+.header-nav a:hover, .header-icons a:hover {
+    opacity: 0.7;
+}
+
+.header-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Main navigation */
+.main-nav {
+    position: fixed;
+    top: 60px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 99;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+}
+
+.main-nav-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.main-nav-content ul {
+    display: flex;
+    gap: 2rem;
+}
+
+.main-nav-content a {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.main-nav-content a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #000;
+    transition: width 0.3s;
+}
+
+.main-nav-content a:hover::after {
+    width: 100%;
+}
+
+/* Responsive styles for header */
+@media (max-width: 768px) {
+    .header-nav {
+        display: none;
+    }
+    
+    .main-nav-content ul {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        padding: 1rem;
+    }
+    
+    .logo img {
+        height: 14px;
+    }
+}
