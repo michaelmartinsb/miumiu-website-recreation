@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+**Notion Project Update Rule:**  
+
+After completing and finalizing any code changes or tasks, always ask the user explicitly if you'd like me to proceed with updating the Notion project "Miu Miu Website Recreation" via the Notion API. This step should occur at the very end of each interaction involving code adjustments.
