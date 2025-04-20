@@ -1,0 +1,8 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+**Rule for Vanilla Web Development:**
+When writing code for our current project, always use vanilla HTML, CSS, and JavaScript. Maximize functionality and styling within HTML and CSS, and only use JavaScript when strictly necessary. Keep JavaScript minimal, efficient, and clean.
+
