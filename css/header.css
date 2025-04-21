@@ -7,47 +7,67 @@
     z-index: 100;
     background-color: #fff;
     border-bottom: none;
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.header-content {
+.header-container {
     max-width: 1440px;
     margin: 0 auto;
+    position: relative;
+}
+
+/* Large logo - initial state */
+.header-large-logo {
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem 0;
+    transition: all 0.3s ease;
+    height: 80px;
+    overflow: hidden;
+}
+
+.header-large-logo img {
+    height: 49px;
+    width: 300px;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Compact header with small logo and icons */
+.header-compact {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 0.75rem 2rem;
+    transition: all 0.3s ease;
 }
 
-.logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+.header-small-logo {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
 }
 
-.logo img {
-    height: 16px;
+.header-small-logo img {
+    height: 24px;
+    object-fit: contain;
 }
 
-.header-nav {
+.header-actions {
     display: flex;
-    gap: 1.8rem;
+    align-items: center;
+    gap: 1.5rem;
 }
 
-.header-nav a, .header-icons a {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: opacity 0.2s;
 }
 
-.header-nav a:hover, .header-icons a:hover {
+.icon-btn:hover {
     opacity: 0.7;
-}
-
-.header-icons {
-    display: flex;
-    gap: 1.5rem;
 }
 
 .icon {
@@ -55,16 +75,89 @@
     height: 18px;
 }
 
+/* Menu trigger button */
+.menu-trigger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    margin-left: 0.5rem;
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: #000;
+    transition: all 0.3s ease;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    left: 0;
+}
+
+.menu-icon::before {
+    top: -6px;
+}
+
+.menu-icon::after {
+    top: 6px;
+}
+
+/* Menu trigger active state (X) */
+.menu-trigger.active .menu-icon {
+    background-color: transparent;
+}
+
+.menu-trigger.active .menu-icon::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.menu-trigger.active .menu-icon::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+/* Scrolled state styles */
+.header.scrolled .header-large-logo {
+    height: 0;
+    padding: 0;
+}
+
+.header.scrolled .header-small-logo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Main navigation */
 .main-nav {
     position: fixed;
-    top: 50px;
+    top: 60px; /* Adjusted for new header height */
     width: 100%;
     background-color: #fff;
     z-index: 99;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, opacity 0.3s ease, box-shadow 0.3s ease;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.main-nav.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
 }
 
 .main-nav-content {
@@ -104,23 +197,34 @@
 
 /* Responsive styles for header */
 @media (max-width: 768px) {
-    .header-nav {
-        display: none;
+    .header-compact {
+        padding: 0.75rem 1rem;
     }
     
     .main-nav-content ul {
         gap: 1.5rem;
         flex-wrap: wrap;
         justify-content: center;
+        padding: 0 1rem;
     }
 }
 
 @media (max-width: 480px) {
-    .header-content {
-        padding: 1rem;
+    .header-large-logo img {
+        height: 40px;
+        width: 250px;
     }
     
-    .logo img {
-        height: 14px;
+    .header-small-logo img {
+        height: 20px;
+    }
+    
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .header-actions {
+        gap: 1rem;
     }
 }

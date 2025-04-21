@@ -11,6 +11,7 @@ const acceptCookiesBtn = document.getElementById('acceptCookies');
 const cookieSettingsBtn = document.getElementById('cookieSettings');
 const header = document.querySelector('.header');
 const mainNav = document.querySelector('.main-nav');
+const menuTrigger = document.querySelector('.menu-trigger');
 
 // Show newsletter popup after 5 seconds
 setTimeout(() => {
@@ -79,27 +80,31 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Toggle menu
+if (menuTrigger) {
+    menuTrigger.addEventListener('click', () => {
+        mainNav.classList.toggle('active');
+        menuTrigger.classList.toggle('active');
+    });
+}
+
 // Header behavior on scroll
 let lastScrollTop = 0;
 window.addEventListener('scroll', () => {
     const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
     
+    // Trigger header transition on scroll
+    if (currentScrollTop > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+    
     // Add shadow on scroll
     if (currentScrollTop > 10) {
         header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-        mainNav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
     } else {
         header.style.boxShadow = 'none';
-        mainNav.style.boxShadow = 'none';
-    }
-    
-    // Hide navigation on scroll down, show on scroll up
-    if (currentScrollTop > lastScrollTop && currentScrollTop > 200) {
-        mainNav.style.transform = 'translateY(-100%)';
-        mainNav.style.opacity = '0';
-    } else {
-        mainNav.style.transform = 'translateY(0)';
-        mainNav.style.opacity = '1';
     }
     
     lastScrollTop = currentScrollTop;
