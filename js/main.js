@@ -8,10 +8,15 @@ const newsletterPopup = document.getElementById('newsletterPopup');
 const closePopupBtn = document.getElementById('closePopup');
 const cookieNotice = document.getElementById('cookieNotice');
 const acceptCookiesBtn = document.getElementById('acceptCookies');
-const cookieSettingsBtn = document.getElementById('cookieSettings');
-const header = document.querySelector('.header');
+const header = document.querySelector('.innovation-header');
+const bigLogo = header.querySelector('.innovation-header__logo--big');
+const smallLogoLink = header.querySelector('.innovation-header__logo--small a');
 const mainNav = document.querySelector('.main-nav');
 const menuTrigger = document.querySelector('.menu-trigger');
+
+// Initial header setup
+// Set variable on root element for initial logo height
+document.documentElement.style.setProperty('--bigLogoHeight', bigLogo.clientHeight + 'px');
 
 // Show newsletter popup after 5 seconds
 setTimeout(() => {
@@ -30,11 +35,6 @@ closePopupBtn.addEventListener('click', () => {
 acceptCookiesBtn.addEventListener('click', () => {
     cookieNotice.style.display = 'none';
     localStorage.setItem('cookiesAccepted', 'true');
-});
-
-cookieSettingsBtn.addEventListener('click', () => {
-    // In a real implementation, this would open cookie settings
-    alert('Cookie settings would open here');
 });
 
 // Check if cookies already accepted
@@ -88,27 +88,41 @@ if (menuTrigger) {
     });
 }
 
-// Header behavior on scroll
+// Header behavior on scroll - using Miu Miu's approach
 let lastScrollTop = 0;
-window.addEventListener('scroll', () => {
-    const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+window.addEventListener('scroll', function() {
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
     
-    // Trigger header transition on scroll
-    if (currentScrollTop > 50) {
+    if (scrollY > 0) {
+        // User has scrolled down
         header.classList.add('scrolled');
+        header.classList.add('animating');
+        
+        // Directly set the height of the large logo to 0
+        bigLogo.style.height = '0px';
+        document.documentElement.style.setProperty('--bigLogoHeight', '0px');
+        
+        // Enable tabindex for small logo
+        smallLogoLink.setAttribute('tabindex', '0');
+        
+        // Add shadow
+        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.5)';
     } else {
+        // User is at top of page
         header.classList.remove('scrolled');
-    }
-    
-    // Add shadow on scroll
-    if (currentScrollTop > 10) {
-        header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-    } else {
+        header.classList.remove('animating');
+        
+        // Reset logo height to original
+        bigLogo.style.height = '80px';
+        document.documentElement.style.setProperty('--bigLogoHeight', '80px');
+        
+        // Disable small logo link when not visible
+        smallLogoLink.setAttribute('tabindex', '-1');
+        
+        // Remove shadow
         header.style.boxShadow = 'none';
     }
-    
-    lastScrollTop = currentScrollTop;
-});
+}, { passive: true });
 
 // Image lazy loading implementation
 document.addEventListener('DOMContentLoaded', function() {

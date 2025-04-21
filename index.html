@@ -12,44 +12,32 @@
     <link rel="stylesheet" href="css/section-borders.css">
 </head>
 <body>
-    <header class="header">
-        <div class="header-container">
-            <!-- Large brand logo for initial state -->
-            <div class="header-large-logo">
+    <header class="innovation-header">
+        <!-- Large logo for initial state -->
+        <div class="innovation-header__logo innovation-header__logo--big">
+            <div class="innovation-header__logo--wrapper">
                 <a href="#">
-                    <img src="assets/images/2LionelBamfordWebHeaderGold-01-gigapixel-cgi-1x.png" alt="Lionel Bamford" width="300" height="49">
+                    <img src="assets/images/2LionelBamfordWebHeaderGold-01-gigapixel-cgi-1x.png" alt="Miu Miu" width="600">
                 </a>
             </div>
-            
-            <!-- Compact header with small logo and action icons -->
-            <div class="header-compact">
-                <!-- Small logo for scrolled state -->
-                <div class="header-small-logo">
-                    <a href="#">
-                        <img src="assets/images/lionelWhiteToEdit.png" alt="Lionel Bamford" height="24">
-                    </a>
+        </div>
+        
+        <!-- Compact header with small logo and action icons -->
+        <div class="innovation-header__container">
+            <div class="innovation-header__menu">
+                <div class="innovation-header__logo-small-container">
+                    <div class="innovation-header__logo innovation-header__logo--small">
+                        <a href="#" tabindex="-1">
+                            <img src="assets/images/2LionelBamfordWebHeaderGold-01-gigapixel-cgi-1x.png" alt="Miu Miu" height="24">
+                        </a>
+                    </div>
                 </div>
                 
                 <!-- Action icons and menu trigger -->
-                <div class="header-actions">
-                    <a href="#" class="icon-btn" aria-label="Account">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" fill="black"/>
-                        </svg>
-                    </a>
+                <div class="innovation-header__icons">
                     <a href="#" class="icon-btn" aria-label="Search">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="black"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="icon-btn" aria-label="Wishlist">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z" fill="none" stroke="black" stroke-width="1.5"/>
-                        </svg>
-                    </a>
-                    <a href="#" class="icon-btn" aria-label="Shopping Bag">
-                        <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M19 7H16V6C16 4.93913 15.5786 3.92172 14.8284 3.17157C14.0783 2.42143 13.0609 2 12 2C10.9391 2 9.92172 2.42143 9.17157 3.17157C8.42143 3.92172 8 4.93913 8 6V7H5C4.73478 7 4.48043 7.10536 4.29289 7.29289C4.10536 7.48043 4 7.73478 4 8V20C4 20.2652 4.10536 20.5196 4.29289 20.7071C4.48043 20.8946 4.73478 21 5 21H19C19.2652 21 19.5196 20.8946 19.7071 20.7071C19.8946 20.5196 20 20.2652 20 20V8C20 7.73478 19.8946 7.48043 19.7071 7.29289C19.5196 7.10536 19.2652 7 19 7ZM10 6C10 5.46957 10.2107 4.96086 10.5858 4.58579C10.9609 4.21071 11.4696 4 12 4C12.5304 4 13.0391 4.21071 13.4142 4.58579C13.7893 4.96086 14 5.46957 14 6V7H10V6ZM18 19H6V9H8V11C8 11.2652 8.10536 11.5196 8.29289 11.7071C8.48043 11.8946 8.73478 12 9 12C9.26522 12 9.51957 11.8946 9.70711 11.7071C9.89464 11.5196 10 11.2652 10 11V9H14V11C14 11.2652 14.1054 11.5196 14.2929 11.7071C14.4804 11.8946 14.7348 12 15 12C15.2652 12 15.5196 11.8946 15.7071 11.7071C15.8946 11.5196 16 11.2652 16 11V9H18V19Z" fill="black"/>
+                            <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="currentColor"/>
                         </svg>
                     </a>
                     <button class="menu-trigger" aria-label="Menu">
@@ -78,17 +66,19 @@
     <main class="main-content">
         <!-- Hero section -->
         <section class="hero">
-            <img src="assets/images/hero.jpg" class="hero-image" alt="Miu Miu Iconic Matelassé Campaign">
+            <div class="hero-image-container">
+                <img src="assets/images/2LionelBamfordWebHeaderGold-01-gigapixel-cgi-1x.png" class="hero-image" alt="Miu Miu Iconic Matelassé Campaign Left">
+            </div>
             <div class="hero-content">
                 <h1 class="hero-title">Iconic Matelassé</h1>
-                <a href="#" class="btn">Discover</a>
+                <a href="#" class="discover-link">Discover</a>
             </div>
         </section>
 
         <!-- Section 1 -->
         <section class="section">
             <div class="section-content" style="position: relative;">
-                <img src="assets/images/section1.jpg" class="section-image" alt="SS25 Collection">
+                <img src="assets/images/2LionelBamfordWebHeaderGold-01-gigapixel-cgi-1x.png" class="section-image" alt="SS25 Collection">
                 <div class="section-text">
                     <h2 class="section-title">Contrasting codes</h2>
                     <a href="#" class="btn">Discover</a>
@@ -101,14 +91,14 @@
             <div class="section-content">
                 <div class="featured-grid">
                     <div class="featured-item">
-                        <img src="assets/images/bags.jpg" alt="Miu Miu Bags">
+                        <img src="assets/images/2LionelBamfordWebHeaderGold-01-gigapixel-cgi-1x.png" alt="Miu Miu Bags">
                         <div class="featured-text">
                             <h3 class="featured-title">Soft, distinctive shapes</h3>
                             <a href="#" class="btn">Discover</a>
                         </div>
                     </div>
                     <div class="featured-item">
-                        <img src="assets/images/shoes.jpg" alt="Miu Miu Shoes">
+                        <img src="assets/images/2LionelBamfordWebHeaderGold-01-gigapixel-cgi-1x.png" alt="Miu Miu Shoes">
                         <div class="featured-text">
                             <h3 class="featured-title">Vibrant archival expressions</h3>
                             <a href="#" class="btn">Discover</a>
@@ -121,7 +111,7 @@
         <!-- Section 2 -->
         <section class="section">
             <div class="section-content" style="position: relative;">
-                <img src="assets/images/section2.jpg" class="section-image" alt="Sporty Essence">
+                <img src="assets/images/2LionelBamfordWebHeaderGold-01-gigapixel-cgi-1x.png" class="section-image" alt="Sporty Essence">
                 <div class="section-text">
                     <h2 class="section-title">Sporty Essence</h2>
                     <a href="#" class="btn">Discover</a>
@@ -134,22 +124,22 @@
             <h2 class="club-title">Miu Miu Club</h2>
             <div class="club-grid">
                 <div class="club-item">
-                    <img src="assets/images/womens-tales.jpg" alt="Women's Tales">
+                    <img src="assets/images/2LionelBamfordWebHeaderGold-01-gigapixel-cgi-1x.png" alt="Women's Tales">
                     <h3 class="club-item-title">Miu Miu Women's Tales</h3>
                     <a href="#" class="club-link">Discover</a>
                 </div>
                 <div class="club-item">
-                    <img src="assets/images/leathergoods.jpg" alt="Leathergoods Campaign">
+                    <img src="assets/images/2LionelBamfordWebHeaderGold-01-gigapixel-cgi-1x.png" alt="Leathergoods Campaign">
                     <h3 class="club-item-title">Miu Miu 2025<br>Leathergoods Campaign</h3>
                     <a href="#" class="club-link">Discover</a>
                 </div>
                 <div class="club-item">
-                    <img src="assets/images/fashion-show.jpg" alt="Fashion Show">
+                    <img src="assets/images/2LionelBamfordWebHeaderGold-01-gigapixel-cgi-1x.png" alt="Fashion Show">
                     <h3 class="club-item-title">Fall Winter 2025<br>Fashion Show</h3>
                     <a href="#" class="club-link">Discover</a>
                 </div>
                 <div class="club-item">
-                    <img src="assets/images/literary-club.jpg" alt="Literary Club">
+                    <img src="assets/images/2LionelBamfordWebHeaderGold-01-gigapixel-cgi-1x.png" alt="Literary Club">
                     <h3 class="club-item-title">Miu Miu Literary Club</h3>
                     <a href="#" class="club-link">Discover</a>
                 </div>
@@ -197,22 +187,22 @@
                 <div class="social-links">
                     <a href="#" aria-label="Instagram">
                         <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="black"/>
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="currentColor"/>
                         </svg>
                     </a>
                     <a href="#" aria-label="Facebook">
                         <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.653-.012c-.761 0-1.356.176-1.792.527-.436.351-.653.970-.653 1.856v1.6h3.39l-.878 3.667h-2.512v7.98H9.101z" fill="black"/>
+                            <path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.653-.012c-.761 0-1.356.176-1.792.527-.436.351-.653.970-.653 1.856v1.6h3.39l-.878 3.667h-2.512v7.98H9.101z" fill="currentColor"/>
                         </svg>
                     </a>
                     <a href="#" aria-label="Twitter">
                         <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z" fill="black"/>
+                            <path d="M23.954 4.569a10 10 0 0 1-2.825.775 4.958 4.958 0 0 0 2.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 0 0-8.384 4.482C7.691 8.094 4.066 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 0 1-2.228-.616v.061a4.923 4.923 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.085 4.937 4.937 0 0 0 4.604 3.417 9.868 9.868 0 0 1-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 0 0 7.557 2.209c9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63a9.936 9.936 0 0 0 2.46-2.548l-.047-.02z" fill="currentColor"/>
                         </svg>
                     </a>
                     <a href="#" aria-label="YouTube">
                         <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z" fill="black"/>
+                            <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z" fill="currentColor"/>
                         </svg>
                     </a>
                 </div>
@@ -245,12 +235,10 @@
             <p>This site uses cookies to improve your experience. By clicking "Accept", you agree to our use of cookies.</p>
             <div class="cookie-buttons">
                 <button id="acceptCookies">Accept</button>
-                <button id="cookieSettings">Cookie Settings</button>
             </div>
         </div>
     </div>
 
     <script src="js/main.js"></script>
-    <script src="js/wireframe.js"></script>
 </body>
 </html>

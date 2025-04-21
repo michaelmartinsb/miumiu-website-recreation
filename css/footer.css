@@ -1,20 +1,22 @@
 /* Footer styles */
 .footer {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    padding: 3rem 2rem;
+    padding: 4rem 2rem 2rem;
+    background-color: #000;
+    color: #fff;
+    border-top: 1px solid #333;
 }
 
 .footer-content {
     max-width: 1440px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 3rem;
 }
 
 .footer-col h3 {
-    font-size: 0.8rem;
-    font-weight: 500;
+    font-size: 0.9rem;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 1.5rem;
@@ -27,12 +29,24 @@
 }
 
 .footer-col a {
-    font-size: 0.75rem;
-    transition: opacity 0.2s;
+    font-size: 0.8rem;
+    position: relative;
+    display: inline-block;
 }
 
-.footer-col a:hover {
-    opacity: 0.7;
+.footer-col a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: width 0.3s;
+}
+
+.footer-col a:hover::after {
+    width: 100%;
 }
 
 .social-links {
@@ -44,16 +58,19 @@
 .social-icon {
     width: 20px;
     height: 20px;
+    fill: #fff;
 }
 
 .footer-bottom {
     max-width: 1440px;
-    margin: 2rem auto 0;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 3rem auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid #333;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 0.8rem;
+    color: #999;
 }
 
 .copyright {
@@ -67,20 +84,25 @@
     font-size: 0.7rem;
 }
 
-/* Responsive footer styles */
+/* Responsive footer */
 @media (max-width: 768px) {
     .footer-content {
         grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
     }
     
     .footer-bottom {
         flex-direction: column;
         gap: 1rem;
-        text-align: center;
+        align-items: flex-start;
     }
 }
 
 @media (max-width: 480px) {
+    .footer {
+        padding: 3rem 1rem 1.5rem;
+    }
+    
     .footer-content {
         grid-template-columns: 1fr;
     }

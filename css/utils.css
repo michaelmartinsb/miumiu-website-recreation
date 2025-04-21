@@ -1,162 +1,106 @@
-/* Button styles */
-.btn {
-    display: inline-block;
-    padding: 0.75rem 2.5rem;
-    border: 1px solid #fff;
-    color: #fff;
-    text-transform: uppercase;
-    font-size: 0.7rem;
-    letter-spacing: 1px;
-    transition: all 0.3s;
-    background-color: transparent;
-}
+/* Utility Classes */
 
-.btn:hover {
-    background-color: #fff;
-    color: #000;
-}
+/* Spacing utilities */
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 1rem; }
+.mt-4 { margin-top: 1.5rem; }
+.mt-5 { margin-top: 2rem; }
 
-/* Newsletter popup */
-.newsletter-popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 1rem; }
+.mb-4 { margin-bottom: 1.5rem; }
+.mb-5 { margin-bottom: 2rem; }
 
-.newsletter-popup-content {
-    background-color: #fff;
-    padding: 3rem;
-    max-width: 500px;
-    width: 90%;
-    text-align: center;
-    position: relative;
-}
+.my-1 { margin-top: 0.25rem; margin-bottom: 0.25rem; }
+.my-2 { margin-top: 0.5rem; margin-bottom: 0.5rem; }
+.my-3 { margin-top: 1rem; margin-bottom: 1rem; }
+.my-4 { margin-top: 1.5rem; margin-bottom: 1.5rem; }
+.my-5 { margin-top: 2rem; margin-bottom: 2rem; }
 
-.close-popup {
+.pt-1 { padding-top: 0.25rem; }
+.pt-2 { padding-top: 0.5rem; }
+.pt-3 { padding-top: 1rem; }
+.pt-4 { padding-top: 1.5rem; }
+.pt-5 { padding-top: 2rem; }
+
+.pb-1 { padding-bottom: 0.25rem; }
+.pb-2 { padding-bottom: 0.5rem; }
+.pb-3 { padding-bottom: 1rem; }
+.pb-4 { padding-bottom: 1.5rem; }
+.pb-5 { padding-bottom: 2rem; }
+
+.py-1 { padding-top: 0.25rem; padding-bottom: 0.25rem; }
+.py-2 { padding-top: 0.5rem; padding-bottom: 0.5rem; }
+.py-3 { padding-top: 1rem; padding-bottom: 1rem; }
+.py-4 { padding-top: 1.5rem; padding-bottom: 1.5rem; }
+.py-5 { padding-top: 2rem; padding-bottom: 2rem; }
+
+/* Text utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.text-uppercase { text-transform: uppercase; }
+.text-lowercase { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+
+/* Display utilities */
+.d-flex { display: flex; }
+.d-block { display: block; }
+.d-inline { display: inline; }
+.d-inline-block { display: inline-block; }
+.d-none { display: none; }
+
+/* Flex utilities */
+.flex-row { flex-direction: row; }
+.flex-column { flex-direction: column; }
+.justify-content-center { justify-content: center; }
+.justify-content-between { justify-content: space-between; }
+.justify-content-around { justify-content: space-around; }
+.align-items-center { align-items: center; }
+.align-items-start { align-items: flex-start; }
+.align-items-end { align-items: flex-end; }
+
+/* Position utilities */
+.position-relative { position: relative; }
+.position-absolute { position: absolute; }
+.position-fixed { position: fixed; }
+
+/* Width/Height utilities */
+.w-100 { width: 100%; }
+.h-100 { height: 100%; }
+
+/* Color utilities */
+.bg-black { background-color: #000; }
+.bg-white { background-color: #fff; }
+.text-white { color: #fff; }
+.text-black { color: #000; }
+
+/* Border utilities */
+.border { border: 1px solid; }
+.border-top { border-top: 1px solid; }
+.border-bottom { border-bottom: 1px solid; }
+.border-left { border-left: 1px solid; }
+.border-right { border-right: 1px solid; }
+
+.border-white { border-color: #fff; }
+.border-black { border-color: #000; }
+
+/* Sizing utilities */
+.w-auto { width: auto; }
+.h-auto { height: auto; }
+
+/* Screen reader utility */
+.sr-only {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-}
-
-.newsletter-popup h3 {
-    font-size: 1.2rem;
-    font-weight: 400;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.newsletter-popup p {
-    font-size: 0.9rem;
-    margin-bottom: 2rem;
-}
-
-.newsletter-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.newsletter-form input {
-    padding: 0.8rem;
-    border: 1px solid #ddd;
-    font-size: 0.9rem;
-}
-
-.newsletter-form button {
-    padding: 0.8rem;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.newsletter-form button:hover {
-    background-color: #333;
-}
-
-/* Cookie notice */
-.cookie-notice {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #fff;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-    padding: 1rem 2rem;
-}
-
-.cookie-notice-content {
-    max-width: 1440px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.cookie-notice p {
-    font-size: 0.8rem;
-}
-
-.cookie-buttons {
-    display: flex;
-    gap: 1rem;
-}
-
-.cookie-buttons button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    cursor: pointer;
-    background-color: transparent;
-    transition: all 0.3s;
-}
-
-#acceptCookies {
-    background-color: #000;
-    color: #fff;
-    border: 1px solid #000;
-}
-
-#acceptCookies:hover {
-    background-color: #333;
-}
-
-#cookieSettings {
-    border: 1px solid #000;
-    color: #000;
-}
-
-#cookieSettings:hover {
-    background-color: #f5f5f5;
-}
-
-/* Responsive component styles */
-@media (max-width: 768px) {
-    .cookie-notice-content {
-        flex-direction: column;
-        gap: 1rem;
-        text-align: center;
-    }
-    
-    .newsletter-popup-content {
-        padding: 2rem;
-    }
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }
