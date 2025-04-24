@@ -27,6 +27,8 @@ The header implementation for the Miu Miu website recreation features a sophisti
                 <img src="images/logo-miumiu-small.png" alt="">
             </a>
         </div>
+
+> Michael's Notes:  
         
         <!-- Action icons -->
         <div class="innovation-header__actions">
