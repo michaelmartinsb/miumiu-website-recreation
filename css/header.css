@@ -8,9 +8,10 @@
     background-color: #000;
     border-bottom: none;
     transition: box-shadow 0.3s ease;
+    height: auto;
 }
 
-/* Large logo styles */
+/* Large logo styles - keep it above nav */
 .innovation-header__logo--big {
     height: 80px;
     display: flex;
@@ -18,6 +19,9 @@
     padding: 1.5rem 0;
     overflow: hidden;
     transition: height 0.3s linear;
+    position: relative;
+    z-index: 102;
+    background-color: #000;
 }
 
 .innovation-header__logo--wrapper {
@@ -35,6 +39,9 @@
 /* Compact header with small logo and icons */
 .innovation-header__container {
     width: 100%;
+    background-color: #000;
+    position: relative;
+    z-index: 101; /* Place above navigation */
 }
 
 .innovation-header__menu {
@@ -56,6 +63,57 @@
     height: 24px;
     object-fit: contain;
     filter: brightness(0) invert(1);
+}
+
+/* Integrated navigation styling */
+.innovation-header__nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.innovation-header__nav ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.innovation-header__nav li {
+    white-space: nowrap;
+}
+
+.innovation-header__nav a {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+    transition: color 0.2s ease;
+}
+
+.innovation-header__nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: #fff;
+    transition: width 0.3s ease;
+}
+
+.innovation-header__nav a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.innovation-header__nav a:hover::after {
+    width: 100%;
 }
 
 .innovation-header__icons {
@@ -81,60 +139,6 @@
     fill: #fff;
 }
 
-/* Menu trigger button */
-.menu-trigger {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    width: 24px;
-    height: 24px;
-    position: relative;
-    margin-left: 0.5rem;
-}
-
-.menu-icon,
-.menu-icon::before,
-.menu-icon::after {
-    position: absolute;
-    width: 24px;
-    height: 2px;
-    background-color: #fff;
-    transition: all 0.3s ease;
-}
-
-.menu-icon::before,
-.menu-icon::after {
-    content: '';
-    left: 0;
-}
-
-.menu-icon::before {
-    top: -6px;
-}
-
-.menu-icon::after {
-    top: 6px;
-}
-
-/* Menu trigger active state (X) */
-.menu-trigger.active .menu-icon {
-    background-color: transparent;
-}
-
-.menu-trigger.active .menu-icon::before {
-    transform: rotate(45deg);
-    top: 0;
-}
-
-.menu-trigger.active .menu-icon::after {
-    transform: rotate(-45deg);
-    top: 0;
-}
-
 /* Scrolled state styles */
 .innovation-header.scrolled .innovation-header__logo--big {
     height: 0;
@@ -158,70 +162,109 @@
 /* Main navigation */
 .main-nav {
     position: fixed;
-    top: 60px; /* Adjusted for new header height */
+    top: 80px; /* Positioned below the header with big logo */
+    left: 0;
     width: 100%;
-    background-color: #000;
-    z-index: 99;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    transform: translateY(-100%);
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.95); /* Slightly transparent for visual effect */
+    z-index: 98; /* Below header but above content */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3); /* More visible border */
+    transition: top 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Stronger shadow for separation */
+    padding: 10px 0;
+    pointer-events: auto; /* Ensure clicks register */
 }
 
-.main-nav.active {
-    transform: translateY(0);
-    opacity: 1;
-    visibility: visible;
-}
-
+/* Ensure navigation links are clickable */
 .main-nav-content {
     max-width: 1440px;
     margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    padding: 1rem 0;
+    padding: 0.7rem 0;
+    position: relative;
+    z-index: 99;
 }
 
 .main-nav-content ul {
     display: flex;
-    gap: 2rem;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 0 2rem;
+    position: relative;
 }
 
+/* Increase tap/click area for navigation links */
 .main-nav-content a {
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    position: relative;
     color: #fff;
+    font-weight: 500; /* Bolder for better visibility */
+    display: block;
+    padding: 0.7rem 0.7rem; /* Larger click area */
+    position: relative;
+    transition: color 0.2s ease;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for better contrast */
 }
 
 .main-nav-content a::after {
     content: '';
     position: absolute;
-    bottom: -4px;
     left: 0;
+    bottom: 0;
     width: 0;
     height: 1px;
     background-color: #fff;
-    transition: width 0.3s;
+    transition: width 0.3s ease;
+}
+
+.main-nav-content a:hover {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .main-nav-content a:hover::after {
     width: 100%;
 }
 
+/* Navigation position adjusts when header is scrolled */
+.innovation-header.scrolled + .main-nav {
+    top: 60px; /* Adjusts to the smaller header height when scrolled */
+}
+
 /* Responsive styles for header */
+@media (max-width: 1024px) {
+    .innovation-header__nav ul {
+        gap: 1.5rem;
+    }
+    
+    .innovation-header__nav a {
+        font-size: 0.8rem;
+    }
+}
+
 @media (max-width: 768px) {
     .innovation-header__menu {
         padding: 0.75rem 1rem;
+        flex-wrap: wrap;
     }
     
-    .main-nav-content ul {
-        gap: 1.5rem;
+    .innovation-header__logo-small-container {
+        flex: 0 0 auto;
+    }
+    
+    .innovation-header__nav {
+        order: 3;
+        flex: 1 0 100%;
+        margin-top: 0.75rem;
+        padding: 0;
+    }
+    
+    .innovation-header__nav ul {
         flex-wrap: wrap;
-        justify-content: center;
-        padding: 0 1rem;
+        gap: 1rem;
+    }
+    
+    .innovation-header__icons {
+        flex: 0 0 auto;
     }
 }
 
@@ -242,5 +285,11 @@
     
     .innovation-header__icons {
         gap: 1rem;
+    }
+    
+    .innovation-header__nav ul {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 0.5rem;
     }
 }

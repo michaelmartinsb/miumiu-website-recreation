@@ -35,9 +35,10 @@ img {
 
 /* Main content */
 .main-content {
-    padding-top: calc(var(--bigLogoHeight) + 60px); /* Adjusts dynamically with big logo height */
+    padding-top: calc(var(--bigLogoHeight) + 60px); /* Adjusted now that nav is in header */
     position: relative;
     transition: padding-top 0.3s linear; /* Smooth adjustment of content position */
+    z-index: 1; /* Keep below nav and header */
 }
 
 /* Hero section */
@@ -282,4 +283,13 @@ img {
     .section-title {
         font-size: 1rem;
     }
+}
+
+/* Adjust z-index for proper stacking order */
+.innovation-header {
+    z-index: 100;
+}
+
+.main-nav {
+    z-index: 99;
 }

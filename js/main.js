@@ -11,8 +11,6 @@ const acceptCookiesBtn = document.getElementById('acceptCookies');
 const header = document.querySelector('.innovation-header');
 const bigLogo = header.querySelector('.innovation-header__logo--big');
 const smallLogoLink = header.querySelector('.innovation-header__logo--small a');
-const mainNav = document.querySelector('.main-nav');
-const menuTrigger = document.querySelector('.menu-trigger');
 
 // Initial header setup
 // Set variable on root element for initial logo height
@@ -80,18 +78,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Toggle menu
-if (menuTrigger) {
-    menuTrigger.addEventListener('click', () => {
-        mainNav.classList.toggle('active');
-        menuTrigger.classList.toggle('active');
-    });
-}
-
 // Header behavior on scroll - using Miu Miu's approach
 let lastScrollTop = 0;
 window.addEventListener('scroll', function() {
     const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    const mainContent = document.querySelector('.main-content');
     
     if (scrollY > 0) {
         // User has scrolled down
@@ -107,6 +98,9 @@ window.addEventListener('scroll', function() {
         
         // Add shadow
         header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.5)';
+        
+        // Adjust main content padding for the smaller header
+        mainContent.style.paddingTop = '60px'; // Just header height
     } else {
         // User is at top of page
         header.classList.remove('scrolled');
@@ -121,6 +115,9 @@ window.addEventListener('scroll', function() {
         
         // Remove shadow
         header.style.boxShadow = 'none';
+        
+        // Reset main content padding to account for big logo
+        mainContent.style.paddingTop = 'calc(80px + 60px)'; // Big logo + header
     }
 }, { passive: true });
 
