@@ -11,6 +11,40 @@ const acceptCookiesBtn = document.getElementById('acceptCookies');
 const header = document.querySelector('.innovation-header');
 const bigLogo = header.querySelector('.innovation-header__logo--big');
 const smallLogoLink = header.querySelector('.innovation-header__logo--small a');
+const hamburgerBtn = document.querySelector('.hamburger-menu');
+const mobileMenu = document.querySelector('.mobile-menu');
+
+// Mobile menu toggle
+if (hamburgerBtn && mobileMenu) {
+    hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+        
+        // Set aria-expanded for accessibility
+        const isExpanded = hamburgerBtn.classList.contains('active');
+        hamburgerBtn.setAttribute('aria-expanded', isExpanded);
+        
+        // Prevent background scrolling when menu is open
+        if (isExpanded) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+    });
+    
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+            document.body.style.overflow = '';
+            hamburgerBtn.setAttribute('aria-expanded', false);
+        });
+    });
+}
 
 // Initial header setup
 // Set variable on root element for initial logo height
@@ -120,6 +154,17 @@ window.addEventListener('scroll', function() {
         mainContent.style.paddingTop = 'calc(80px + 60px)'; // Big logo + header
     }
 }, { passive: true });
+
+// Close mobile menu when window is resized to desktop size
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768 && mobileMenu && hamburgerBtn) {
+        hamburgerBtn.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        document.body.style.overflow = '';
+        hamburgerBtn.setAttribute('aria-expanded', false);
+    }
+});
 
 // Image lazy loading implementation
 document.addEventListener('DOMContentLoaded', function() {
