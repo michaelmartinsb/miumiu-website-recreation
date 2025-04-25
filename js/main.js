@@ -134,15 +134,23 @@ window.addEventListener('scroll', function() {
         header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.5)';
         
         // Adjust main content padding for the smaller header
-        mainContent.style.paddingTop = '60px'; // Just header height
+        if (window.innerWidth <= 768) {
+            mainContent.style.paddingTop = '60px'; // Just small header height for mobile
+        } else {
+            mainContent.style.paddingTop = '60px'; // Just header height for desktop
+        }
     } else {
         // User is at top of page
         header.classList.remove('scrolled');
         header.classList.remove('animating');
         
         // Reset logo height to original
-        bigLogo.style.height = '80px';
-        document.documentElement.style.setProperty('--bigLogoHeight', '80px');
+        if (window.innerWidth <= 768) {
+            bigLogo.style.height = '60px'; // Smaller height for mobile
+        } else {
+            bigLogo.style.height = '80px'; // Original height for desktop
+        }
+        document.documentElement.style.setProperty('--bigLogoHeight', bigLogo.style.height);
         
         // Disable small logo link when not visible
         smallLogoLink.setAttribute('tabindex', '-1');
@@ -151,18 +159,46 @@ window.addEventListener('scroll', function() {
         header.style.boxShadow = 'none';
         
         // Reset main content padding to account for big logo
-        mainContent.style.paddingTop = 'calc(80px + 60px)'; // Big logo + header
+        if (window.innerWidth <= 768) {
+            mainContent.style.paddingTop = 'calc(60px + 60px)'; // Mobile big logo + header
+        } else {
+            mainContent.style.paddingTop = 'calc(80px + 60px)'; // Desktop big logo + header
+        }
     }
 }, { passive: true });
 
 // Close mobile menu when window is resized to desktop size
 window.addEventListener('resize', () => {
+    const mainContent = document.querySelector('.main-content');
+    
     if (window.innerWidth > 768 && mobileMenu && hamburgerBtn) {
         hamburgerBtn.classList.remove('active');
         mobileMenu.classList.remove('active');
         document.body.classList.remove('menu-open');
         document.body.style.overflow = '';
         hamburgerBtn.setAttribute('aria-expanded', false);
+    }
+    
+    // Adjust logo heights and padding based on screen size and scroll position
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    
+    if (scrollY > 0) {
+        // Scrolled down state
+        if (window.innerWidth <= 768) {
+            mainContent.style.paddingTop = '60px'; // Just small header height for mobile
+        } else {
+            mainContent.style.paddingTop = '60px'; // Just header height for desktop
+        }
+    } else {
+        // Top of page state
+        if (window.innerWidth <= 768) {
+            bigLogo.style.height = '60px'; // Smaller height for mobile
+            mainContent.style.paddingTop = 'calc(60px + 60px)'; // Mobile big logo + header
+        } else {
+            bigLogo.style.height = '80px'; // Original height for desktop
+            mainContent.style.paddingTop = 'calc(80px + 60px)'; // Desktop big logo + header
+        }
+        document.documentElement.style.setProperty('--bigLogoHeight', bigLogo.style.height);
     }
 });
 

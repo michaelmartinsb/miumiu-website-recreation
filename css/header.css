@@ -344,6 +344,11 @@
     
     .innovation-header__logo-small-container {
         order: 1;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    
+    .innovation-header.scrolled .innovation-header__logo-small-container {
         opacity: 1;
         transform: translateY(0);
     }
@@ -369,6 +374,11 @@
     
     .innovation-header__logo--big img {
         height: 32px;
+    }
+    
+    .innovation-header.scrolled .innovation-header__logo--big {
+        height: 0;
+        padding: 0;
     }
 }
 
