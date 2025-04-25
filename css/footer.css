@@ -1,9 +1,9 @@
 /* Footer styles */
 .footer {
     padding: 4rem 2rem 2rem;
-    background-color: #000;
-    color: #fff;
-    border-top: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+    border-top: 1px solid #eee;
 }
 
 .footer-content {
@@ -41,7 +41,7 @@
     left: 0;
     width: 0;
     height: 1px;
-    background-color: #fff;
+    background-color: #000;
     transition: width 0.3s;
 }
 
@@ -58,19 +58,19 @@
 .social-icon {
     width: 20px;
     height: 20px;
-    fill: #fff;
+    fill: #000;
 }
 
 .footer-bottom {
     max-width: 1440px;
     margin: 3rem auto 0;
     padding-top: 1.5rem;
-    border-top: 1px solid #333;
+    border-top: 1px solid #eee;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 0.8rem;
-    color: #999;
+    color: #666;
 }
 
 .copyright {

@@ -48,7 +48,7 @@ img {
     overflow: hidden;
     height: calc(100vh - 80px);
     min-height: 400px;
-    background-color: #000;
+    background-color: #f8f8f8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,7 +71,7 @@ img {
     transition: transform 0.3s ease;
     position: relative;
     z-index: 1;
-    filter: brightness(0.9);
+    filter: brightness(1);
 }
 
 .hero:hover .hero-image {
@@ -94,20 +94,20 @@ img {
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
-    color: #fff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    color: #000;
+    text-shadow: none;
 }
 
 .discover-link {
-    color: #fff;
+    color: #000;
     text-transform: uppercase;
     font-size: 0.9rem;
     letter-spacing: 1px;
     position: relative;
     display: inline-block;
     padding-bottom: 4px;
-    border-bottom: 1px solid #fff;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    border-bottom: 1px solid #000;
+    text-shadow: none;
 }
 
 /* Section styles */
@@ -145,7 +145,7 @@ img {
     letter-spacing: 1px;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
-    color: #fff;
+    color: #000;
 }
 
 /* Featured items grid */
@@ -183,7 +183,7 @@ img {
     font-weight: 400;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: #fff;
+    color: #000;
 }
 
 /* Club section */
@@ -199,6 +199,7 @@ img {
     letter-spacing: 2px;
     text-transform: uppercase;
     margin-bottom: 3rem;
+    color: #000;
 }
 
 .club-grid {
@@ -221,6 +222,7 @@ img {
     font-weight: 400;
     letter-spacing: 1px;
     margin-bottom: 0.5rem;
+    color: #000;
 }
 
 .club-link {
@@ -229,6 +231,7 @@ img {
     letter-spacing: 1px;
     position: relative;
     display: inline-block;
+    color: #000;
 }
 
 .club-link::after {
