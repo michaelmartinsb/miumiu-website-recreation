@@ -28,19 +28,20 @@ miumiu-website/
 
 ## Features
 
-- **Minimalist Design**: Clean black and white aesthetic true to Miu Miu's brand identity
+- **Light Theme Design**: Clean light theme aesthetic inspired by Miu Miu's brand identity (updated from original dark theme)
 - **Responsive Layout**: Works seamlessly across devices of all sizes
 - **Modern Web Practices**: Semantic HTML5, CSS3, and vanilla JavaScript
 - **Performance Optimized**: Minimal external resources and optimized assets
 - **Development Tools**:
-  - Wireframe borders for visual structure development
-  - Section labels for easy identification
+  - Wireframe borders for visual structure development (if enabled)
+  - Section labels for easy identification (if enabled)
 - **Interactive Elements**:
   - Newsletter signup popup
   - Cookie consent notice
   - Smooth scrolling
-  - Responsive navigation
+  - Responsive, always-visible navigation (adjusted items)
   - Image hover effects
+  - Adjusted logo sizing for better visibility
 
 ## Getting Started
 
@@ -97,12 +98,13 @@ For optimal display, use these image dimensions:
    - Fashion Show: 600px × 800px
    - Literary Club: 600px × 800px
 
-5. **Logo** (SVG already implemented, but if replaced with image):
-   - 120px × 16px
+5. **Logo** (Current implementation uses gold image on white background):
+   - Large Logo Height: 60px (Adjusted)
+   - Small Logo Height: 30px (Adjusted)
 
 6. **Icons**:
-   - Header icons: 24px × 24px
-   - Social icons: 24px × 24px
+   - Header icons: 18px × 18px (Adjusted for light theme)
+   - Social icons: 20px × 20px (Adjusted for light theme)
 
 ## Browser Support
 
@@ -116,7 +118,7 @@ The website is designed to work on all modern browsers:
 
 To customize for different needs:
 
-1. **Colors**: Update color values in CSS files to match your brand
+1. **Colors**: Update color values in CSS files to match your brand (currently set to a light theme)
 2. **Typography**: Replace or modify font styles in CSS
 3. **Content**: Update HTML with your own text and images
 4. **Structure**: Modify the HTML structure as needed while maintaining the responsive design

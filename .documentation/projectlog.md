@@ -52,10 +52,9 @@ The header implementation for the Miu Miu website recreation features a sophisti
     <!-- Main navigation -->
     <nav class="main-nav">
         <ul>
-            <li><a href="#">New Arrivals</a></li>
-            <li><a href="#">Best Sellers</a></li>
-            <li><a href="#">Ready To Wear</a></li>
+            <li><a href="#">Ready to Wear</a></li>
             <li><a href="#">Bags</a></li>
+            <li><a href="#">Shoes</a></li>
             <li><a href="#">Accessories</a></li>
             <li><a href="#">Collections</a></li>
         </ul>
@@ -81,6 +80,7 @@ Key CSS features:
     width: 100%;
     z-index: 1000;
     background-color: #fff;
+    border-bottom: 1px solid #eee;
     transition: transform 0.3s ease;
 }
 
@@ -89,11 +89,22 @@ Key CSS features:
     height: 80px;
     text-align: center;
     transition: height 0.3s ease;
+    background-color: #fff;
+}
+
+.innovation-header__logo--big img {
+    height: 60px;
+    filter: none;
 }
 
 .innovation-header__logo--small {
     opacity: 0;
     transition: opacity 0.3s ease;
+}
+
+.innovation-header__logo--small img {
+    height: 30px;
+    filter: none;
 }
 
 /* Scrolled state */
@@ -226,7 +237,7 @@ The header implementation is compatible with all modern browsers:
 Potential areas for improvement include:
 - Adding support for reduced motion preferences
 - Enhancing mobile menu with sub-navigation options
-- Implementing theme switching capability (light/dark mode)
+- Implementing a theme toggle for dark mode (currently light theme is default)
 
 ## Footer Implementation Documentation
 
@@ -310,9 +321,9 @@ Key CSS features:
 ```css
 .footer {
     padding: 4rem 2rem 2rem;
-    background-color: #000;
-    color: #fff;
-    border-top: 1px solid #333;
+    background-color: #fff;
+    color: #000;
+    border-top: 1px solid #eee;
 }
 
 .footer-content {
@@ -344,7 +355,7 @@ Key CSS features:
     left: 0;
     width: 0;
     height: 1px;
-    background-color: #fff;
+    background-color: #000;
     transition: width 0.3s;
 }
 
@@ -356,9 +367,10 @@ Key CSS features:
     max-width: 1440px;
     margin: 3rem auto 0;
     padding-top: 1.5rem;
-    border-top: 1px solid #333;
+    border-top: 1px solid #eee;
     display: flex;
     justify-content: space-between;
+    color: #666;
 }
 
 /* Responsive styles */
@@ -396,7 +408,7 @@ Key CSS features:
 
 ### Newsletter Popup
 
-The website includes a newsletter subscription popup that appears after a short delay:
+The website includes a newsletter subscription popup that appears after a short delay. Styles have been updated for the light theme.
 
 #### HTML Structure
 ```html
@@ -449,7 +461,7 @@ if (newsletterForm) {
 ```
 
 ### Cookie Notice
-A cookie consent notification is displayed to users on their first visit:
+A cookie consent notification is displayed to users on their first visit. Styles have been updated for the light theme.
 
 #### HTML Structure
 ```html
@@ -528,7 +540,7 @@ The navigation menu for the Miu Miu website recreation has been completely redes
     <div class="innovation-header__logo-small-container">
         <div class="innovation-header__logo innovation-header__logo--small">
             <a href="#" tabindex="-1">
-                <img src="assets/images/miu-miu-logo.png" alt="Miu Miu" height="24">
+                <img src="assets/images/2LionelBamfordWebHeaderGold-01-gigapixel-cgi-1x.png" alt="Miu Miu" height="30">
             </a>
         </div>
     </div>
@@ -541,8 +553,6 @@ The navigation menu for the Miu Miu website recreation has been completely redes
             <li><a href="#">Shoes</a></li>
             <li><a href="#">Accessories</a></li>
             <li><a href="#">Collections</a></li>
-            <li><a href="#">Gifts</a></li>
-            <li><a href="#">Iconic Matelassé</a></li>
         </ul>
     </div>
     
@@ -584,7 +594,7 @@ The integrated navigation styling has been designed to work seamlessly with the 
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #fff;
+    color: #000;
     font-weight: 500;
     padding: 0.5rem 0;
     position: relative;
@@ -598,12 +608,12 @@ The integrated navigation styling has been designed to work seamlessly with the 
     bottom: -2px;
     width: 0;
     height: 1px;
-    background-color: #fff;
+    background-color: #000;
     transition: width 0.3s ease;
 }
 
 .innovation-header__nav a:hover {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .innovation-header__nav a:hover::after {
@@ -741,7 +751,7 @@ The Miu Miu website recreation has successfully implemented:
 
 1. **Fully Integrated Header and Navigation**:
    - Unified component with always-visible navigation
-   - Smooth transitions between header states
+   - Smooth transitions between header states with adjusted logo sizes
    - Fully responsive across all device sizes
 
 2. **Main Page Content**:
@@ -753,6 +763,9 @@ The Miu Miu website recreation has successfully implemented:
    - Newsletter popup with form validation
    - Cookie consent notice
    - Hover effects and transitions throughout
+
+4. **Light Theme**:
+   - Switched the entire website color scheme to a light theme (white/light backgrounds, dark text).
 
 ### Next Steps
 
